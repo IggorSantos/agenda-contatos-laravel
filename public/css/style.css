@@ -1,0 +1,207 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.dropdown-toggle{
+  display: inline-block;
+  width: 100px; /* Largura da elemento */
+  white-space: nowrap;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassar a largura */
+  text-overflow: ellipsis; /* Adiciona as reticências */
+  background-color: white !important;
+  border: none !important;
+}
+.image-preview{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}
+.title{
+    font-size: 35px;
+    color: red;
+    font-family: "Anta", sans-serif;
+}
+.img-background{
+  width: 100%;
+}
+.link-home{
+  text-decoration: none;
+}
+.bi-plus-circle-fill{
+    margin-right: 5px;
+}
+.div-back{
+  position: relative;
+  /*width: 100vw;*/
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+.div-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/background.png);
+  filter: blur(5px); /* Ajuste o valor conforme necessário */
+  z-index: -1;
+}
+
+.div-back::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+.text-welcome{
+  font-weight: 800;
+  font-size: 50px;
+  color:#26cb7e; 
+  padding-left: 2%;
+}
+.buttons-home{
+  padding-top: 10%;
+  padding-left: 10%;
+}
+.button-home{
+  width: 50%;
+}
+.agenda-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+}
+.contato-dados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.card{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #FAFA86;
+  transition: 1s;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+.card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.icons{
+  display: flex;
+}
+.button-icon{
+  background-color: #FAFA86;
+  border: none;
+  font-size: 18px;
+}
+.link-edit{
+  text-decoration: none;
+  color: black;
+}
+.bi-pin-fill{
+  font-size: 25px;
+  color: red;
+}
+.bi-pencil-square{
+  font-size: 20px;
+  /*color: blue;*/
+}
+.bi-trash3-fill{
+  font-size: 50px;
+  /*color: red;*/
+}
+
+.button-modal-delete{
+  background-color: red;
+}
+
+.delete-btn{
+  background-color: #FAFA86;  
+  border: none
+}
+
+/* Create*/
+form{ 
+  padding: 0 30rem;
+}
+.form-delete{
+  padding: 0 0;
+}
+.form-container{
+  padding: 1rem 1rem;
+  border-radius: 15px;
+}
+.form-search{
+  padding: 0 0;
+}
+
+.msg {
+  background-color: #D4EDDA;
+  color: #155724;
+  border: 1px solid #C3E6CB;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.erro {
+  background-color: #f5b1a3;
+  color: #FC2F03;
+  border: 1px solid #A71E01;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1100px) {
+  form {
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 760px){
+  .contatos-dados{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 810px){
+  .div-back{
+    height: 100vh;
+  }
+}
+
+@media (max-width: 810px){
+  .text-welcome{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 780px){
+  .div-back{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
