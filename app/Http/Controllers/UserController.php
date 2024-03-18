@@ -56,7 +56,9 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
-        $user->photo = $image;
+        if($request->hasFile('photo')){
+            $user->photo = $image;
+        }       
         
 
         //$user = User::create($user); 

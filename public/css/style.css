@@ -149,6 +149,27 @@ form{
   padding: 0 0;
 }
 
+input[type="file"] {
+  display: none;
+}
+.label-photo {
+  padding: 20px 10px;
+  width: 200px;
+  /*background-color: #333;*/
+  border: 1px solid #333;
+  border-radius: 8%;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#preview-img{
+  border-radius: 50%;
+}
+
 .msg {
   background-color: #D4EDDA;
   color: #155724;

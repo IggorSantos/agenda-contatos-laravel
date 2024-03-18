@@ -7,9 +7,11 @@
     @csrf
         <div class="form-container"> 
 
-        <div class="form-group">
-            <label for="photo">Selecione uma foto:</label>
-            <input class="form-control-file" type="file" id="photo" name="photo" accept="image/png, image/jpeg" />
+        <div class="form-group d-flex justify-content-center">
+            <label class="label-photo" for="photo">
+                <span id="text-photo" class="text-photo">Selecione uma foto</span>
+            </label>
+            <input class="form-control-file" type="file" id="photo" name="photo" accept="image/png, image/jpeg, image/jpg" />
         </div>       
 
         <div class="form-group">
@@ -47,5 +49,33 @@
 
             return; 
         }
+    const avatarImage = document.querySelector('#photo');
+
+    avatarImage.addEventListener('change', function (e){
+        const preview =document.querySelector('#preview-img');
+
+        if(preview){
+            preview.remove();
+        }
+        document.querySelector('.text-photo').textContent = this.files[0].name
+        
+        const spanAvatar = document.querySelector('#text-photo');
+
+        const reader = new FileReader();
+        reader.onload = function(event){
+            const previewImg = document.createElement('img');
+            previewImg.width = 115;
+            previewImg.height = 100;
+            previewImg.id = 'preview-img';
+            previewImg.src = event.target.result;
+            spanAvatar.insertAdjacentElement('afterend', previewImg);
+        }
+        
+        reader.readAsDataURL(avatarImage.files[0]);
+
+
+    })
+
+    
     </script>
 @endsection    
