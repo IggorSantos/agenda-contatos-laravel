@@ -29,8 +29,9 @@
                     <div class="alert alert-danger">{{ $errors->first('email') }}</div> 
                 @endif
             </div> 
-            <div class="mt-3 d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary">Editar</button>             
+            <div class="mt-3 d-flex justify-content-evenly">
+                <button type="submit" class="btn btn-primary">Editar</button>       
+                <a href="/admin/dashboard" class="btn btn-danger">Voltar</a>         
             </div>  
         </div>       
     </form>  

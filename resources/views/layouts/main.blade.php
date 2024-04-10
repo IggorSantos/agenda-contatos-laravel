@@ -38,13 +38,16 @@
                 </button>
                 <ul class="dropdown-menu">
                     <p class="text-center">Olá, {{auth()->user()->name}}</p>
-                    <li><a class="dropdown-item" href="{{ route('admin.dashboard')}}">Meus Contatos</a></li>
+                    <li><a class="dropdown-item" href="{{ route('admin.dashboard')}}">Meus Contatos</a></li>                    
                     <li><a class="dropdown-item" href="{{ route('login.logout')}}">Sair</a></li>
                 </ul>
             </div>
             @endauth
             <!--<a href="/contatos/create" class="btn btn-success"><i class="bi bi-plus-circle-fill"></i>Novo Contato</a>-->
     </header>   
+
+  
+
     <main>
                     @if(session('msg'))
                         <p class="msg">{{ session('msg') }}</p>
