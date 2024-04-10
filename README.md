@@ -20,3 +20,5 @@ Uma aplicação de contatos que foi feita primeiramente com PHP puro, agora refa
 
 ### Preview
 
+<img src="/public/img/agenda-laravel.png">
+
