@@ -18,5 +18,5 @@ Uma aplicação de contatos que foi feita primeiramente com PHP puro, agora refa
 - Banco de dados MySQL
 - Xampp
 
-### Previem
+### Preview
 
