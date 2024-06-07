@@ -20,6 +20,10 @@
                     <div class="alert alert-danger">{{ $errors->first('password') }}</div> 
                 @endif
             </div> 
+            <div class="form-group">
+                <label for="password">Lembrar-me</label>
+                <input type="checkbox" name="remember">
+            </div>
             <div class="mt-3 d-flex justify-content-evenly">  
                 <button id="btnSubmit" type="submit" class="btn btn-primary">Entrar</button>
                 <a id="btnSubmit" href="/" class="btn btn-danger">Voltar</a>
