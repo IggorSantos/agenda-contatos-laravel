@@ -6,6 +6,7 @@ use App\Http\Requests\ContatoRequest;
 use Illuminate\Http\Request;
 use App\Models\Contato;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Gate;
 
 class ContatoController extends Controller
 {
@@ -43,7 +44,7 @@ class ContatoController extends Controller
 
     }
 
-    public function destroy($id){
+     public function destroy($id){
         Contato::findOrFail($id)->delete();
         return redirect('/admin/dashboard')->with('msg', 'Contato excluído com sucesso!');
     }
@@ -51,6 +52,7 @@ class ContatoController extends Controller
     public function show($key){
         $id = Crypt::decrypt($key);
         $contato = Contato::findOrFail($id);
+        Gate::authorize('ver-contato', $contato);
         return view('contatos.show', ['contato' => $contato]);
     }
 
