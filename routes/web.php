@@ -34,3 +34,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 
 
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard')->middleware('auth');
+
+
